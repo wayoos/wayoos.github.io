@@ -191,14 +191,14 @@ prose:
           label: "Date"
           help: "Enter date of post."
           placeholder: "yyyy-mm-dd"
-           alterable: true
+          alterable: true
       - name: "image"
         field:
           element: "text"
           label: "Image"
           help: "Add a thumbnail image to your post."
           placeholder: "Thumbnail"
-         alterable: true
+          alterable: true
       - name: "published"
         field:
           element: "checkbox"
