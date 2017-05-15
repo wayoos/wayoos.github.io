@@ -11,4 +11,4 @@ and then look at other ways to achieve the same goals.
 
 In my next post, I'll explore the test data managment, how we create and manage test data.
 
-Author: [@quidio](https://github.com/quidio)
+Author: [Stéphane Cusin](https://github.com/quidio)
