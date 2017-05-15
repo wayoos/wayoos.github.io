@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Why I used only immutable cattle server ?
+title: Why I used only immutable cattle servers ?
 bigimg: /img/cattle.jpg
 ---
 
