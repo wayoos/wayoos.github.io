@@ -117,11 +117,10 @@ theme: white
 
 
     <section data-background-image="https://ljdchost.com/cF0gNhP.gif">
-        <h2>Image</h2>
     </section>
 
     <section style="text-align: left;">
-            <p>In this talk, I will show you how to define infrastructure as code to deploy Kubernetes over Openstack.
+            <p>In this talk, I will show you how to use infrastructure as code to deploy Kubernetes over Openstack.
             </p>
     </section>
 
@@ -170,8 +169,29 @@ theme: white
 
             TODO add list
     </section>
-    
 
+    <section>
+            <img data-src="{{ "/pres/images/demonet.png" | prepend: site.baseurl }}">
+            <p>First things define network setup</p>
+    </section>
+
+    <section>
+            <img data-src="{{ "/pres/images/demofinal.png" | prepend: site.baseurl }}">
+            <p>Final infrastructure, managed by code</p>
+    </section>
+
+    <section>
+            <p>The price of this setup</p>
+            <ul>
+                    <li>Bastion 3€</li>
+                    <li>Etcd server 3x 6€</li>
+                    <li>Kube master 6€</li>
+                    <li>Kube worker 24x 20€</li>
+                </ul>
+    
+                <p>For 507€ you will have a kubernetes cluster of 2x24=48 Cores and 7Gbx24=168</p>
+            
+    </section>
 
 
     <section style="text-align: left;">
