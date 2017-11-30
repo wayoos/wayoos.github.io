@@ -129,7 +129,7 @@ theme: white
             
             <pre><code class="hljs" data-trim contenteditable>
                 $ wayoos-source-prod
-                $ infra-compose up
+                $ infra-compose exec up
             </code></pre>
         </section>
 
@@ -176,6 +176,41 @@ theme: white
     </section>
 
     <section>
+            <p>Network setup, vrack and security group</p>
+            
+            <pre><code class="hljs" data-trim contenteditable>
+                $ infra-compose exec ovh-vrack up
+                $ infra-compose exec network-up
+            </code></pre>
+    </section>
+
+    <section>
+            <img data-src="{{ "/pres/images/demoimage.png" | prepend: site.baseurl }}">
+            <p>Control base server image</p>
+    </section>
+
+    <section>
+            <p>Install server image</p>
+            
+            <pre><code class="hljs" data-trim contenteditable>
+                $ infra-compose exec image-up
+            </code></pre>
+    </section>
+
+    <section>
+            <img data-src="{{ "/pres/images/demobastion.png" | prepend: site.baseurl }}">
+            <p>Bastion</p>
+    </section>
+
+    <section>
+            <p>Start bastion</p>
+            
+            <pre><code class="hljs" data-trim contenteditable>
+                $ infra-compose exec bastion up
+            </code></pre>
+    </section>
+
+    <section>
             <img data-src="{{ "/pres/images/demofinal.png" | prepend: site.baseurl }}">
             <p>Final infrastructure, managed by code</p>
     </section>
@@ -192,6 +227,7 @@ theme: white
                 <p>For 507€ you will have a kubernetes cluster of 2x24=48 Cores and 7Gbx24=168</p>
             
     </section>
+
 
 
     <section style="text-align: left;">
