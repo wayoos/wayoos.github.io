@@ -211,6 +211,32 @@ theme: white
     </section>
 
     <section>
+            <img data-src="{{ "/pres/images/demoetcd.png" | prepend: site.baseurl }}">
+            <p>Etcd cluster</p>
+    </section>
+
+    <section>
+            <p>Start Etcd cluster</p>
+            
+            <pre><code class="hljs" data-trim contenteditable>
+                $ infra-compose exec etcd-new
+            </code></pre>
+    </section>
+
+    <section>
+            <img data-src="{{ "/pres/images/demomaster.png" | prepend: site.baseurl }}">
+            <p>Kubernetes master</p>
+    </section>
+
+    <section>
+            <p>Start Kubernetes master</p>
+            
+            <pre><code class="hljs" data-trim contenteditable>
+                $ infra-compose exec kube-master up
+            </code></pre>
+    </section>
+
+    <section>
             <img data-src="{{ "/pres/images/demofinal.png" | prepend: site.baseurl }}">
             <p>Final infrastructure, managed by code</p>
     </section>
