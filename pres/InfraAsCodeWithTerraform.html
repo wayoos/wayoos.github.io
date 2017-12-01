@@ -150,7 +150,8 @@ theme: white
     <section style="text-align: left;" data-background-image="https://static.pexels.com/photos/227729/pexels-photo-227729.jpeg">
             <h2 style="color: wheat">Outline</h2>
 
-            <h3 style="color: white; text-transform: none;">1. infrastructure-as-code</h3>
+            <h3 style="color: white; text-transform: none;">1. infrastructure as code</h3>
+            <h3 style="color: white; text-transform: none;">2. terraform</h3>
             <h3 style="color: white; text-transform: none;">2. demo</h3>
             <h3 style="color: white; text-transform: none;">3. infra-compose</h3>
     </section>
@@ -158,36 +159,27 @@ theme: white
     <section style="text-align: left;" data-background-image="https://static.pexels.com/photos/227729/pexels-photo-227729.jpeg">
         <h2 style="color: wheat">Outline</h2>
 
-        <h3 style="color: white; text-transform: none;">1. infrastructure-as-code</h3>
-        <h3 style="color: grey; text-transform: none;">2. demo</h3>
-        <h3 style="color: grey; text-transform: none;">3. infra-compose</h3>
+        <h3 style="color: white; text-transform: none;">1. infrastructure as code</h3>
+        <h3 style="color: grey; text-transform: none;">2. terraform</h3>
+        <h3 style="color: grey; text-transform: none;">3. demo</h3>
+        <h3 style="color: grey; text-transform: none;">4. infra-compose</h3>
     </section>
 
-    <section style="text-align: left;">
-            <h2>Outline</h2>
+    <section>
+        <p>Instead of clicking around a web UI or SSHing to a server and manually executing commands,
+            the idea behind IAC is to write code to define, provision, and manage your infrastructure.</p>
+    </section>
+
+    <section>
+        <p>The benefits of infrastructure as code</p>
             <ul>
-                <li>infrastructure-as-code most popular tools</li>
-                <li>Mutable Infrastructure vs Immutable Infrastructure</li>
-                <li>Procedural vs Declarative</li>
-                <li>Client/Server Architecture vs Client-Only Architecture</li>
-                <li>Demo </li>
-                <li>infra-compose tool</li>
-            </ul>
-    </section>
-
-
-
-    <section>
-        <p>Instead of clicking around a web UI or SSHing to a server and manually executing commands, the idea behind IAC is to write code to define, provision, and manage your infrastructure.</p>
-    </section>
-
-    <section>
-            <p>- Treat Infrastructure Like Application Code</p>
-            <p>- Same Code for All Environments</p>
-            <p>- Anyone Can Build an Environment Anytime</p>
-            <p>- Validate Infrastructure Before Deployment</p>
-            <p>- Always Know What Changed</p>
-            <p>- Iac Will Put a Smile on Your Face</p>
+                    <li>Treat Infrastructure Like Application Code</li>
+                    <li>Same Code for All Environments</li>
+                    <li>Anyone Can Build an Environment Anytime</li>
+                    <li>Validate Infrastructure Before Deployment</li>
+                    <li>Always Know What Changed</li>
+                    <li>Iac Will Put a Smile on Your Face</li>
+                </ul>
             <aside class="notes">
                     https://dzone.com/articles/infrastructure-as-code-the-benefits
             </aside>
@@ -195,7 +187,7 @@ theme: white
     </section>
         
     <section style="text-align: center; color: white;" data-background-image="https://static.pexels.com/photos/258510/pexels-photo-258510.jpeg">
-        <h2 style="color: white; text-transform: none;">Ok for IAC but wich tool ?</h2>
+        <h2 style="color: white; text-transform: none;">Ok for IAC but which tool ?</h2>
         <ul>
             <li>Puppet (2005)</li>
             <li>Chef (2009)</li>
@@ -206,7 +198,40 @@ theme: white
         </ul>
     </section>
 
+    <section>
+        <p>Why I use Terraform</p>
+        <ul>
+            <li>Configuration Management vs Orchestration</li>            
+            <li>Mutable Infrastructure vs Immutable Infrastructure</li>            
+            <li>Procedural vs Declarative</li>            
+            <li>Client/Server Architecture vs Client-Only Architecture</li>          
+        </ul>
 
+        <aside class="notes">
+                Here are the main trade-offs I considered
+        </aside>
+
+    </section>
+
+    <section>
+        <p>Configuration Management vs Orchestration</p>
+        <p>
+                Chef, Puppet, Ansible, and SaltStack are all “configuration management” tools, which means they are designed to install and manage software on existing servers.</p>
+    </section>
+
+    <section>
+            <p>Configuration Management vs Orchestration</p>            
+        <p>CloudFormation and Terraform are “orchestration tools”, which means they are designed to provision the servers themselves, leaving the job of configuring those servers to other tools.</p>
+    </section>
+
+    <section>
+        <p>Mutable Infrastructure vs Immutable Infrastructure</p>
+    </section>
+
+    <section>
+        <p>Mutable Infrastructure vs Immutable Infrastructure</p>
+    </section>
+    
     <section>
             <p>A comparison of popular infrastructure-as-code tools.</p>
             <img data-src="https://cdn-images-1.medium.com/max/2000/1*bVC97LGrOY4R5E4WwzMLzw.png">
@@ -217,20 +242,24 @@ theme: white
             <img data-src="https://cdn-images-1.medium.com/max/2000/1*bVC97LGrOY4R5E4WwzMLzw.png">
     </section>
         
-    <section>
-            <p>12 factory</p>
 
-            TODO add list
+    <section style="text-align: left;" data-background-image="https://static.pexels.com/photos/227729/pexels-photo-227729.jpeg">
+        <h2 style="color: wheat">Outline</h2>
+
+        <h3 style="color: grey; text-transform: none;">1. infrastructure as code</h3>
+        <h3 style="color: white; text-transform: none;">2. terraform</h3>        
+        <h3 style="color: grey; text-transform: none;">3. demo</h3>
+        <h3 style="color: grey; text-transform: none;">4. infra-compose</h3>
     </section>
 
     <section style="text-align: left;" data-background-image="https://static.pexels.com/photos/227729/pexels-photo-227729.jpeg">
         <h2 style="color: wheat">Outline</h2>
 
-        <h3 style="color: grey; text-transform: none;">1. infrastructure-as-code</h3>
-        <h3 style="color: white; text-transform: none;">2. demo</h3>
-        <h3 style="color: grey; text-transform: none;">3. infra-compose</h3>
+        <h3 style="color: grey; text-transform: none;">1. infrastructure as code</h3>
+        <h3 style="color: grey; text-transform: none;">2. terraform</h3>        
+        <h3 style="color: white; text-transform: none;">3. demo</h3>
+        <h3 style="color: grey; text-transform: none;">4. infra-compose</h3>
     </section>
-
 
     <section>
             <img data-src="{{ "/pres/images/demonet.png" | prepend: site.baseurl }}">
@@ -319,9 +348,10 @@ theme: white
     <section style="text-align: left;" data-background-image="https://static.pexels.com/photos/227729/pexels-photo-227729.jpeg">
         <h2 style="color: wheat">Outline</h2>
 
-        <h3 style="color: grey; text-transform: none;">1. infrastructure-as-code</h3>
-        <h3 style="color: grey; text-transform: none;">2. demo</h3>
-        <h3 style="color: white; text-transform: none;">3. infra-compose</h3>
+        <h3 style="color: grey; text-transform: none;">1. infrastructure as code</h3>
+        <h3 style="color: grey; text-transform: none;">2. terraform</h3>        
+        <h3 style="color: grey; text-transform: none;">3. demo</h3>
+        <h3 style="color: white; text-transform: none;">4. infra-compose</h3>
     </section>
 
 
