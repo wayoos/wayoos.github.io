@@ -1,7 +1,7 @@
 ---
 layout: slides
 title: Infrastructure as code with Terraform
-theme: white
+theme: wayoos
 ---
 
 <section>
@@ -111,8 +111,9 @@ theme: white
     </section>
 
 
-    <section style="text-align: left;">
-            <p>What append if all was setup with GUI and you have to maintain it all. Forever</p>
+    <section>
+            <p>What append if all was setup with GUI and</p>
+            <p>you have to maintain it all. Forever</p>
     </section>
 
 
@@ -141,6 +142,8 @@ theme: white
             <p></p>
             <p></p>
             <h2 style="text-align: left; text-transform: none; color: rgb(129, 127, 123); margin-bottom: 0px">wayoos.io</h2>
+            <h3 style="text-align: left; text-transform: none; color: rgb(129, 127, 123); margin-bottom: 0px">
+                github.com/wayoos</h3>
         </div>
         <div style="float:right;width:50%;padding-right:0px;">
             <img data-src="https://avatars1.githubusercontent.com/u/6886021?s=460&v=4">                        
@@ -202,8 +205,8 @@ theme: white
         <p>Why I use Terraform</p>
         <ul>
             <li>Configuration Management vs Orchestration</li>            
+            <li>Procedural vs Declarative</li>
             <li>Mutable Infrastructure vs Immutable Infrastructure</li>            
-            <li>Procedural vs Declarative</li>            
             <li>Client/Server Architecture vs Client-Only Architecture</li>          
         </ul>
 
@@ -233,15 +236,74 @@ theme: white
     </section>
     
     <section>
-            <p>A comparison of popular infrastructure-as-code tools.</p>
-            <img data-src="https://cdn-images-1.medium.com/max/2000/1*bVC97LGrOY4R5E4WwzMLzw.png">
-    </section>
-
-    <section>
-            <p>A comparison of popular infrastructure-as-code tools.</p>
-            <img data-src="https://cdn-images-1.medium.com/max/2000/1*bVC97LGrOY4R5E4WwzMLzw.png">
-    </section>
-        
+            <p>A comparison of popular infrastructure as code tools</p>
+        <table style="font-size: 60%">
+            <thead>
+                <th></th>
+                <th>Puppet</th>
+                <th>Chef</th>
+                <th>SaltStack</th>
+                <th>CloudFormation</th>
+                <th>Ansible</th>
+                <th>Terraform</th>
+            </thead>
+            <tr>
+                <th>Code</th>
+                <td>Open source</td>
+                <td>Open source</td>
+                <td>Open source</td>
+                <td>Closed source</td>
+                <td>Open source</td>
+                <td>Open source</td>
+            </tr>
+            <tr>
+                    <th>Cloud</th>
+                    <td>All</td>
+                    <td>All</td>
+                    <td>All</td>
+                    <td>AWS only</td>
+                    <td>All</td>
+                    <td>All</td>
+                </tr>
+                <tr>
+                        <th>Type</th>
+                        <td>Config Mgmt</td>
+                        <td>Config Mgmt</td>
+                        <td>Config Mgmt</td>
+                        <td>Orchestration</td>
+                        <td>Config Mgmt</td>
+                        <td>Orchestration</td>
+                </tr>
+                <tr>
+                        <th>Language</th>
+                        <td>Declarative</td>
+                        <td>Procedural</td>
+                        <td>Declarative</td>
+                        <td>Declarative</td>
+                        <td>Procedural</td>
+                        <td>Declarative</td>
+                    </tr>
+                    <tr>
+                            <th>Infrastructure</th>
+                            <td>Mutable</td>
+                            <td>Mutable</td>
+                            <td>Mutable</td>
+                            <td>Immutable</td>
+                            <td>Mutable</td>
+                            <td>Immutable</td>
+                        </tr>
+                        <tr>
+                                <th>Architecture</th>
+                                <td>Client/Server</td>
+                                <td>Client/Server</td>
+                                <td>Client/Server</td>
+                                <td>Client-Only</td>
+                                <td>Client-Only</td>
+                                <td>Client-Only</td>
+                            </tr>
+                
+            </table>            
+    </section>        
 
     <section style="text-align: left;" data-background-image="https://static.pexels.com/photos/227729/pexels-photo-227729.jpeg">
         <h2 style="color: wheat">Outline</h2>
