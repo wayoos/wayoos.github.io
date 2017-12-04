@@ -240,12 +240,28 @@ theme: wayoos
                     you write code that specifies your desired end state, and the IAC tool itself is responsible for
                     figuring out how to achieve that state.
             </p>
-            <p>&nbsp;</p>
             <p style="color: gray; text-align: left">Java analogy: maven</p>
     </section>
     
     <section>
-        <p>Mutable Infrastructure vs Immutable Infrastructure</p>
+        <p style="color: gray">Mutable Infrastructure vs Immutable Infrastructure</p>
+        <p>Configuration management tools such as Chef, Puppet, Ansible, and SaltStack typically default to a mutable infrastructure paradigm.</p>
+    </section>
+
+    <section>
+            <p style="color: gray">Mutable Infrastructure vs Immutable Infrastructure</p>
+            <p>If you’re using an orchestration tool such as Terraform to deploy machine images created by Docker or Packer,
+             then every “change” is actually a deployment of a new server.</p>
+        </section>
+    
+    <section>
+            <p style="color: gray">Client/Server Architecture vs Client-Only Architecture</p>
+            <p>Chef, Puppet, and SaltStack all use a client/server architecture by default.
+                The client, which could be a web UI or a CLI tool, is what you use to issue commands.</p>
+    </section>
+    <section>
+        <p style="color: gray">Client/Server Architecture vs Client-Only Architecture</p>
+        <p>CloudFormation, Ansible, and Terraform, use a client-only architecture.</p>
     </section>
     
     <section>
@@ -327,6 +343,50 @@ theme: wayoos
         <h3 style="color: grey; text-transform: none;">4. infra-compose</h3>
     </section>
 
+    <section>
+        <p>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is an open source tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.</p>
+
+        <h3 style="text-align: left; text-transform: none; color: rgb(129, 127, 123); margin-bottom: 0px">
+            terraform.io <span>(HashiCorp)</span></h3>
+
+    </section>
+
+    <section>
+        <h2 style="text-align: left; text-transform: none;">How's that work?</h2>
+        <ul>
+            <li>.tf config file allows teams to describe their infrastructure in simple DSL</li>
+            <li>terraform CLI creates, changes, and destroys these resources accordingly</li>
+        </ul>
+    </section>
+
+    <section>
+            <p style="text-align: left; text-transform: none;">Declare .tf file resources via HCL
+                <span style="font-size: 60%">(HashiCorp Configuration Language)</span></p>
+            <pre><code class="hljs" data-trim contenteditable>
+                    resource "openstack_compute_instance_v2" "bastion" {
+                        name = "bastion"
+                        image_id = "${data.openstack_images_image_v2.bastion.id}"
+                        flavor_id = "${var.flavor_id_s1_2}"
+                        key_pair = "bastion-key"
+                        security_groups = ["bastion"]
+
+                        network {
+                          name = "Ext-Net"
+                          access_network = "true"
+                        }
+                    }                      
+        </code></pre>
+    </section>    
+
+    <section>
+            <h2 style="text-align: left; text-transform: none;">Basic CLI usage</h2>
+            <ul>
+                <li><span style="color: gray">terraform plan</span> to view the execution plan</li>
+                <li><span style="color: gray">terraform apply</span> to execute the plan</li>
+                <li><span style="color: gray">terraform destroy</span> to destroy infrastructure</li>
+            </ul>
+        </section>
+
     <section style="text-align: left;" data-background-image="https://static.pexels.com/photos/227729/pexels-photo-227729.jpeg">
         <h2 style="color: wheat">Outline</h2>
 
@@ -356,7 +416,7 @@ theme: wayoos
     </section>
 
     <section>
-            <p>Install server image</p>
+            <p>Install server images</p>
             
             <pre><code class="hljs" data-trim contenteditable>
                 $ infra-compose exec image-up
@@ -429,11 +489,63 @@ theme: wayoos
         <h3 style="color: white; text-transform: none;">4. infra-compose</h3>
     </section>
 
+    <section>
+            <a href="https://github.com/wayoos/infra-compose">github.com/wayoos/infra-compose</a>
+            
+        <p>infra-compose is a tool for defining and running infrastructure commands.
+        With infra-compose, you use a Compose file to configure your application's services.
+            Then, using a single command, you create and start all the infrastructure for your applications. </p>
+
+    </section>
+
+    <section>
+            <p style="text-align: left; text-transform: none;">infra-compose.yaml example</p>
+            <pre><code class="hljs" data-trim contenteditable>
+                    version: '1'
+                    environments:
+                      europe:
+                        - OS_REGION_NAME=EUR
+                      USEast:
+                        - OS_REGION_NAME=US-EAST
+                    services:
+                      bastion:
+                        path: mgmt/services/bastion
+                        commands:
+                          init: [terraform init]
+                          up: [terraform apply]
+                          down: [terraform destroy -force]
+                          ssh: [./script-ssh-connect.sh]
+                    
+                    commands:
+                      init:
+                        - global init
+                        - bastion init
+                      up:
+                        - europe global up
+                        - USEast global up
+                        - bastion up
+                      down: [bastion down]              
+        </code></pre>
+
+        <pre><code class="hljs" data-trim contenteditable>
+            infra-compose exec europe bastion up
+            infra-compose exec USEast bastion up
+        </code></pre>
+
+    </section>
+
+    <section>
+            <a href="https://github.com/wayoos/infra-compose">github.com/wayoos/infra-compose</a>
+            
+        <p>First release start 2018</p>
+        <p>Welcome all kinds of contributions</p>
+    </section>
+
 
     <section style="text-align: left;">
         <h1>Thanks</h1>
         <p>
-            - <a href="http://wayoos.io">wayoos.io</a> <br>
-            - <a href="https://github.com/wayoos/infra-compose">infra-compose</a>
+            <a href="http://wayoos.io">wayoos.io</a> <br>
+            <a href="https://github.com/wayoos/infra-compose">infra-compose</a>
         </p>
     </section>
