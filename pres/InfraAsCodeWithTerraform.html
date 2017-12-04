@@ -110,12 +110,10 @@ theme: wayoos
             <p style="margin-top: 0px">And you should have that in separate environments for stage and prod</p>
     </section>
 
-
     <section>
-            <p>What append if all was setup with GUI and</p>
+            <p>What append if all was setup with web UI and</p>
             <p>you have to maintain it all. Forever</p>
     </section>
-
 
     <section data-background-image="https://ljdchost.com/cF0gNhP.gif">
     </section>
@@ -155,8 +153,8 @@ theme: wayoos
 
             <h3 style="color: white; text-transform: none;">1. infrastructure as code</h3>
             <h3 style="color: white; text-transform: none;">2. terraform</h3>
-            <h3 style="color: white; text-transform: none;">2. demo</h3>
-            <h3 style="color: white; text-transform: none;">3. infra-compose</h3>
+            <h3 style="color: white; text-transform: none;">3. demo</h3>
+            <h3 style="color: white; text-transform: none;">4. infra-compose</h3>
     </section>
 
     <section style="text-align: left;" data-background-image="https://static.pexels.com/photos/227729/pexels-photo-227729.jpeg">
@@ -217,20 +215,35 @@ theme: wayoos
     </section>
 
     <section>
-        <p>Configuration Management vs Orchestration</p>
+        <p style="color: gray">Configuration Management vs Orchestration</p>
         <p>
                 Chef, Puppet, Ansible, and SaltStack are all “configuration management” tools, which means they are designed to install and manage software on existing servers.</p>
     </section>
 
     <section>
-            <p>Configuration Management vs Orchestration</p>            
+        <p style="color: gray">Configuration Management vs Orchestration</p>            
         <p>CloudFormation and Terraform are “orchestration tools”, which means they are designed to provision the servers themselves, leaving the job of configuring those servers to other tools.</p>
     </section>
 
     <section>
-        <p>Mutable Infrastructure vs Immutable Infrastructure</p>
+        <p style="color: gray">Procedural vs Declarative</p>
+        <p>Chef and Ansible encourage a procedural style where you write code that specifies,
+            step-by-step, how to achieve some desired end state.
+        </p>
+        <p>&nbsp;</p>
+        <p style="color: gray; text-align: left">Java analogy: ant</p>
     </section>
 
+    <section>
+            <p style="color: gray">Procedural vs Declarative</p>
+            <p>Terraform, CloudFormation, SaltStack, and Puppet all encourage a more declarative style where
+                    you write code that specifies your desired end state, and the IAC tool itself is responsible for
+                    figuring out how to achieve that state.
+            </p>
+            <p>&nbsp;</p>
+            <p style="color: gray; text-align: left">Java analogy: maven</p>
+    </section>
+    
     <section>
         <p>Mutable Infrastructure vs Immutable Infrastructure</p>
     </section>
