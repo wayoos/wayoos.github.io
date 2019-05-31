@@ -463,6 +463,16 @@ theme: wayoos
     </section>
 
     <section>
+            <p>Start Kubernetes workers</p>
+            
+            <pre><code class="hljs" data-trim contenteditable>
+                $ infra-compose exec kube-worker0 up
+                $ infra-compose exec kube-worker1 up
+                $ infra-compose exec kube-worker2 up
+            </code></pre>
+    </section>
+
+    <section>
             <img data-src="{{ "/pres/images/demofinal.png" | prepend: site.baseurl }}">
             <p>Final infrastructure, managed by code</p>
     </section>
