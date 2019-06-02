@@ -6,4 +6,11 @@ https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-gi
 
 Run your Jekyll site locally:
 
+https://www.michaelehead.com/2016/02/06/installing-gems-without-sudo.html
+gem install bundler
+
+bundle update
+
+bundle install
+
 bundle exec jekyll serve
